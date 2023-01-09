@@ -5,7 +5,7 @@ class Display{
         this.calculador = new Calculadora()
         this.tipoOperacion = undefined
         this.valorActual = ""
-        this.valorAnterio = ""
+        this.valorAnterior = ""
         this.signo = {
             sumar: "+",
             restar: "-",
@@ -50,7 +50,7 @@ class Display{
         const valorAnterior = parseFloat(this.valorAnterior)
         const valorActual = parseFloat(this.valorActual)
 
-        if(isNaN(valorActual) || isNaN(valorActual)) return
+        if( isNaN(valorActual) || isNaN(valorAnterior)) return
         this.valorActual = this.calculador[this.tipoOperacion](valorAnterior, valorActual)
     }
 }
